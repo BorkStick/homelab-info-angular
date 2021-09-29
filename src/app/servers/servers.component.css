@@ -1,0 +1,73 @@
+h2 {
+  color: #fff;
+}
+.servers {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 20em;
+}
+.servers ul {
+  width: 100%;
+}
+.servers li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #fff;
+  width: 96vw;
+  margin: 0.5em;
+  padding: 0.3em 0;
+  height: 2.6em;
+  font-size: larger;
+}
+.servers li:hover {
+  color: #4d4d4d;
+  background-color: rgb(194, 194, 194);
+  left: 0.1em;
+}
+.servers li.selected {
+  background-color: #cfd8dc;
+  color: white;
+}
+.servers li.selected:hover {
+  background-color: #bbd8dc;
+  color: white;
+}
+
+.details-section {
+  color: #fff;
+  font-size: larger;
+}
+
+.accent {
+    color: #50fa7b;
+}
+
+.details-section tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.edit-section {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.edit-section h2 {
+  color: #ff5555;
+}
+
+.edit-section input {
+  height: 30px;
+  width: 30em;
+  display: flex;
+  justify-content: end;
+  margin: 0.5em 0;
+  padding: 0.3em 0;
+  font-size: large;
+}
+
+.edit-section label {
+  font-size: large;
+}

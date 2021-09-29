@@ -1,0 +1,53 @@
+<h2>Servers</h2>
+<ul class="servers">
+  <li *ngFor="let server of servers" (click)="onSelect(server)">
+    <span class="">{{ server.hostname }}</span>
+     |
+    <i>{{ server.ip }}</i>
+  </li>
+</ul>
+
+<div *ngIf="selectedServer" class="details-section">
+  <h2><span class="accent">{{ selectedServer.hostname }}</span> Details</h2>
+  
+
+  <table>
+    <tr>
+      <td><b>id:</b></td>
+      <td>{{ selectedServer.id }}</td>
+    </tr>
+    <tr>
+      <td><b>hostname:</b></td>
+      <td>{{ selectedServer.hostname }}</td>
+    </tr>
+    <tr>
+      <td><b>description:</b></td>
+      <td>{{ selectedServer.description }}</td>
+    </tr>
+    <tr>
+      <td><b>ports:</b></td>
+      <td>{{ selectedServer.ports }}</td>
+    </tr>
+  </table>
+  
+
+  <div class="edit-section">
+    <h2>Edit</h2>
+    <label
+      >hostname:
+      <input [(ngModel)]="selectedServer.hostname" placeholder="hostname" />
+    </label>
+    <label
+      >ip:
+      <input [(ngModel)]="selectedServer.ip" placeholder="ip" />
+    </label>
+    <label
+      >description:
+      <input [(ngModel)]="selectedServer.description" placeholder="description" />
+    </label>
+    <label
+      >ports:
+      <input [(ngModel)]="selectedServer.ports" placeholder="ports" />
+    </label>
+  </div>
+</div>
